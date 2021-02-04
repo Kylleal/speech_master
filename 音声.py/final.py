@@ -2,6 +2,9 @@ import requests
 import pyaudio
 import wave
 import speech_recognition as sr
+import numpy as np
+import matplotlib.pyplot as plt
+import json
 
 RECORD_SECONDS = 5
 WAVE_OUTPUT_FILENAME = "sample.wav"
@@ -38,7 +41,7 @@ waveFile.close()
 
 with open('./sample.wav', 'rb') as f:
     files = {
-        'apikey': (None, 'APIKey'),   #　←　Enter your API key
+        'apikey': (None, 'o2lvbxnxWBVkLBFrpfb6Tzwp2RRUxsy_bIMzFbsybVo'),
         'wav': ('./sample.wav', open('./sample.wav', 'rb'))
         }
 
@@ -55,3 +58,18 @@ with sr.AudioFile(AUDIO_FILE) as source:
 result=r.recognize_google(audio, language='ja-JP')
 
 print(result)
+
+r1 = response.text
+print(r1)
+res = json.loads(r1)
+print(type(res))
+print(res)
+dik = []
+div = []
+res.pop("error")
+for k,v in res.items():
+  dik.append(k)
+  div.append(v)
+x = np.array(div)
+plt.pie(x, labels=dik, counterclock=False, startangle=90, autopct="%.1f%%",pctdistance=0.7)
+plt.show()
