@@ -15,6 +15,9 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
 今回のソースコードには、ないですがリアルタイムに文字起こしをする場合は、google speech API が一番優秀なため、おすすめいたします。
 
 実行環境
+
 python 3.8
+
 pyaudio 
+
 SpeechRecognition 3.8.1
