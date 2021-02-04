@@ -41,7 +41,7 @@ waveFile.close()
 
 with open('./sample.wav', 'rb') as f:
     files = {
-        'apikey': (None, 'o2lvbxnxWBVkLBFrpfb6Tzwp2RRUxsy_bIMzFbsybVo'),
+        'apikey': (None, 'API key'), #ENTER YOU APIKEY 
         'wav': ('./sample.wav', open('./sample.wav', 'rb'))
         }
 
