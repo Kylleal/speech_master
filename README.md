@@ -12,7 +12,7 @@
 
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
 
-今回のソースコードには、ないですがリアルタイムに文字起こしをする場合は、google speech API が一番優秀なため、おすすめいたします。
+今回のソースコードにはないのですが、リアルタイムに文字起こしをする場合には、個人的にgoogle speech API が一番優秀でしたので、おすすめいたします。
 
 実行環境
 
